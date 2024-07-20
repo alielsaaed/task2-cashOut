@@ -3,6 +3,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:task2_deltana/utils/MyTheme.dart';
 
 class AddressWidget extends StatelessWidget {
+  const AddressWidget({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Directionality(

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
+import 'package:task2_deltana/View/visaScreen/addNewVisaScreen.dart';
 import 'package:task2_deltana/View/widgets/cashout_widgets/payment/paymentVisaTile.dart';
 import 'package:task2_deltana/View/widgets/cashout_widgets/payment/payment_button.dart';
 import 'package:task2_deltana/ViewModel/Order_ViewModel.dart';
@@ -39,7 +40,11 @@ class _PaymentMethodWidgetState extends State<PaymentMethodWidget> {
                       child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Text('خيارات الدفع', style: TextStyle(fontWeight: FontWeight.w500,fontSize: 18.spMin,fontFamily: 'IBM Plex Sans Arabic'),),
-                          Text('اضافه جديده', style: TextStyle(fontWeight: FontWeight.w500,fontSize: 18.spMin,fontFamily: 'IBM Plex Sans Arabic',color: MyTheme.lightGreyColor),),
+                          InkWell(
+                              onTap: (){
+                                Navigator.of(context).push(MaterialPageRoute(builder: (context)=> AddNewVisa()));
+                              },
+                              child: Text('اضافه جديده', style: TextStyle(fontWeight: FontWeight.w500,fontSize: 18.spMin,fontFamily: 'IBM Plex Sans Arabic',color: MyTheme.lightGreyColor),)),
                         ],
                       ),
                     ),

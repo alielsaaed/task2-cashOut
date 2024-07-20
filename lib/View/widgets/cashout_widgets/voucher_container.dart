@@ -3,6 +3,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:task2_deltana/utils/MyTheme.dart';
 
 class VoucherContainer extends StatelessWidget {
+  const VoucherContainer({super.key});
+
 
   @override
   Widget build(BuildContext context) {
@@ -23,8 +25,8 @@ class VoucherContainer extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: ElevatedButton(
-                onPressed: (){}, child: Text('تأكيد' , style: TextStyle(color: MyTheme.blackColor,fontSize: 14.spMin,fontFamily: 'IBM Plex Sans Arabic',fontWeight: FontWeight.w500),),
-                style: ElevatedButton.styleFrom(backgroundColor:MyTheme.yellowColor,shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.spMin))),
+                onPressed: (){},
+                style: ElevatedButton.styleFrom(backgroundColor:MyTheme.yellowColor,shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.spMin))), child: Text('تأكيد' , style: TextStyle(color: MyTheme.blackColor,fontSize: 14.spMin,fontFamily: 'IBM Plex Sans Arabic',fontWeight: FontWeight.w500),),
 
               ),
             )

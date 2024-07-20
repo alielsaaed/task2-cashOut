@@ -5,6 +5,8 @@ import 'package:task2_deltana/ViewModel/Order_ViewModel.dart';
 import 'package:task2_deltana/utils/MyTheme.dart';
 
 class TotalPrice extends StatelessWidget {
+  const TotalPrice({super.key});
+
 
   @override
   Widget build(BuildContext context) {
@@ -17,23 +19,23 @@ class TotalPrice extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               ListTile(
-                title: Text('المجموع الفرعي'),
+                title: const Text('المجموع الفرعي'),
                 trailing: Text('${viewModel.totalPrice} IQD',style: TextStyle(color: MyTheme.blackColor,fontSize: 16.spMin,fontWeight: FontWeight.w500,fontFamily: 'IBM Plex Sans Arabic')),
               ),
               ListTile(
-                title: Text('رسوم التوصيل'),
+                title: const Text('رسوم التوصيل'),
                 trailing: Text('${viewModel.deliveryFee} IQD',style: TextStyle(color: MyTheme.blackColor,fontSize: 16.spMin,fontWeight: FontWeight.w500,fontFamily: 'IBM Plex Sans Arabic')),
               ),
               ListTile(
-                title: Text('خصم'),
+                title: const Text('خصم'),
                 trailing: Text('${viewModel.discount} IQD',style: TextStyle(color: MyTheme.blackColor,fontSize: 16.spMin,fontWeight: FontWeight.w500,fontFamily: 'IBM Plex Sans Arabic')),
               ),
               Container(
-                margin: EdgeInsets.symmetric(horizontal: 16.0),
-                child: Divider(color: MyTheme.greyColor),
+                margin: const EdgeInsets.symmetric(horizontal: 16.0),
+                child: const Divider(color: MyTheme.greyColor),
               ),
               ListTile(
-                title: Text('المجموع'),
+                title: const Text('المجموع'),
                 trailing: Text('${viewModel.finalTotalPrice} IQD',style: TextStyle(color: MyTheme.blackColor,fontSize: 16.spMin,fontWeight: FontWeight.w500,fontFamily: 'IBM Plex Sans Arabic'),),
               )
             ],

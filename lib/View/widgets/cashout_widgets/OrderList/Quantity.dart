@@ -8,24 +8,24 @@ import '../../../../utils/MyTheme.dart';
 
 class Quantity extends StatelessWidget{
   final OrderItem item;
-  Quantity({required this.item});
+  const Quantity({super.key, required this.item});
 
   @override
   Widget build(BuildContext context) {
     return Row(
       mainAxisSize: MainAxisSize.min,
-      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         IconButton(onPressed: (){
           Provider.of<OrderViewModel>(context,listen: false).updateQuantity(item, item.quantity +1);
-        }, icon: Icon(Icons.add,color: MyTheme.blackColor)),
+        }, icon: const Icon(Icons.add,color: MyTheme.blackColor)),
 
         Text(item.quantity.toString(),style: TextStyle(fontSize: 18.spMin,fontWeight: FontWeight.w700),),
 
         IconButton(onPressed: (){
           Provider.of<OrderViewModel>(context, listen: false).updateQuantity(item, item.quantity -1);
         },
-            icon: Icon(Icons.remove,color: MyTheme.blackColor,)
+            icon: const Icon(Icons.remove,color: MyTheme.blackColor,)
         ),
       ],
     );
