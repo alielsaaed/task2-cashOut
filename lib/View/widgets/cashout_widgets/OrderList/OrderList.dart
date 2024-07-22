@@ -6,6 +6,8 @@ import 'package:task2_deltana/utils/MyTheme.dart';
 import 'Quantity.dart';
 
 class OrderList extends StatelessWidget {
+  const OrderList({super.key});
+
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +21,7 @@ class OrderList extends StatelessWidget {
             ),
             child: ListView.builder(
               shrinkWrap: true,
-              physics: NeverScrollableScrollPhysics(),
+              physics: const NeverScrollableScrollPhysics(),
               itemCount: viewModel.items.length,
               itemBuilder: (context, index) {
                 final item = viewModel.items[index];

@@ -10,7 +10,7 @@ class PaymentMethodTile extends StatelessWidget {
   final double height;
   final double width;
 
-  const PaymentMethodTile({required this.text, required this.isSelected, required this.onTap, required this.image, required this.height, required this.width});
+  const PaymentMethodTile({super.key, required this.text, required this.isSelected, required this.onTap, required this.image, required this.height, required this.width});
 
   @override
   Widget build(BuildContext context) {
